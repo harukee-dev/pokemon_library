@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-export const TestFetch = () => {
+export const TestFetch = ({ setPokename }) => {
   const [pokemon, setPokemon] = useState(null)
   const [sprite, setSprite] = useState(null)
   const [id, setId] = useState(1)
@@ -12,6 +12,7 @@ export const TestFetch = () => {
         const data = await response.json()
         const name = data.name
         const sprite = data.sprites.front_default
+        setPokename(name)
         setPokemon(() => name)
         setSprite(() => sprite)
       } catch (err) {
