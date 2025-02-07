@@ -1,51 +1,99 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from "react";
 
 export const TestFetch = ({ setPokename }) => {
-  const [pokemon, setPokemon] = useState(null)
-  const [sprite, setSprite] = useState(null)
-  const [id, setId] = useState(1)
+  const [pokemon, setPokemon] = useState<string | null>(null);
+  const [sprite, setSprite] = useState<string | null>(null);
+  const [id, setId] = useState<number>(1);
+  const [query, setQuery] = useState<string>("");
+  const [height, setHeight] = useState<number>(1);
+  const [weight, setWeight] = useState<number>(1);
+  const [hp, setHp] = useState<number>(1);
+  const [attack, setAttack] = useState<number>(1);
+  const [defense, setDefense] = useState<number>(1);
+  const [speed, setSpeed] = useState<number>(1);
+  const [sound, setSound] = useState<string | null>(null);
+
+
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-        const data = await response.json()
-        const name = data.name
-        const sprite = data.sprites.front_default
-        setPokename(name)
-        setPokemon(() => name)
-        setSprite(() => sprite)
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        const data = await response.json();
+        
+        setPokemon(data.name);
+        setPokename(data.name)
+        setSprite(data.sprites.front_default);
+        setHeight(data.height);
+        setWeight(data.weight);
+        setHp(data.stats[0].base_stat)
+        setAttack(data.stats[1].base_stat)
+        setDefense(data.stats[2].base_stat)
+        setSpeed(data.stats[5].base_stat)
+        setSound(data.cries?.latest || null);
       } catch (err) {
-        console.error(err)
+        console.error(err);
       }
     }
-    fetchData()
-  }, [id])
+    fetchData();
+  }, [id]);
 
   function handleNext() {
-    if (id >= 1025) {
-      setId(() => 1)
-    } else {
-      setId((id: number) => id + 1)
-    }
+    setId(id >= 50 ? 1 : id + 1);
   }
 
   function handlePrev() {
-    if (id <= 1) {
-      setId(() => 1025)
-    } else {
-      setId((id: number) => id - 1)
+    setId(id <= 1 ? 50 : id - 1);
+  }
+
+  function handleSearch(event: React.ChangeEvent<HTMLInputElement>) {
+    setQuery(event.target.value.toLowerCase());
+  }
+
+  function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
+    if (event.key === "Enter" && query.trim()) {
+      fetch(`https://pokeapi.co/api/v2/pokemon/${query}`)
+        .then((response) => response.json())
+        .then((data) => {
+          setId(data.id);
+          setQuery("");
+        })
+        .catch((error) => console.error(error));
+        alert("Error")
+        setQuery("");
+    }
+  }
+
+  function playSound() {
+    if (audioRef.current) {
+      audioRef.current.play().catch((err) => console.error("Playback failed", err));
     }
   }
 
   return (
     <div>
-      <h1>{pokemon}</h1>
-      <img src={sprite} alt="pokemon-sprite" />
+      <h1>Name: {pokemon}</h1>
+      <h2>Hp: {hp}</h2>
+      <h2>Attack: {attack}</h2>
+      <h2>Defense: {defense}</h2>
+      <h2>Speed: {speed}</h2>
+      <h2>Height: {height} Weight: {weight}</h2>
+      <img src={sprite || ""} alt="pokemon-sprite" />
+        <audio ref={audioRef} src={sound || ""}></audio>
+        <button onClick={playSound}>Sound of death</button>
       <div>
-        <button onClick={handlePrev}>previous</button>
-        <button onClick={handleNext}>next</button>
+        <button onClick={handlePrev}>Previous</button>
+        <button onClick={handleNext}>Next</button>
+
+        <input
+          type="text"
+          value={query}
+          onChange={handleSearch}
+          onKeyDown={handleKeyDown}
+          placeholder="Enter the Pokémon name"
+        />
       </div>
     </div>
-  )
-}
+  );
+};
