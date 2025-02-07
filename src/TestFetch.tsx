@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-export const TestFetch = () => {
+export const TestFetch = ({ setPokename }) => {
   const [pokemon, setPokemon] = useState<string | null>(null);
   const [sprite, setSprite] = useState<string | null>(null);
   const [id, setId] = useState<number>(1);
@@ -23,6 +23,7 @@ export const TestFetch = () => {
         const data = await response.json();
         
         setPokemon(data.name);
+        setPokename(data.name)
         setSprite(data.sprites.front_default);
         setHeight(data.height);
         setWeight(data.weight);

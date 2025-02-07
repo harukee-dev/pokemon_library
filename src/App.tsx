@@ -1,11 +1,18 @@
-import React from 'react'
-import { TestFetch } from './TestFetch.tsx'
+import { useState } from 'react'
+import { PokemonModelWithSuspense } from './PokemonModel'
+import { TestFetch } from './TestFetch'
+import { scales, positions } from './pokemonSettings'
 
 function App() {
+  const [pokename, setPokename] = useState('bulbasaur')
   return (
     <div className="App">
-      <h1>hello world!</h1>
-      <TestFetch />
+      <TestFetch setPokename={setPokename} />
+      <PokemonModelWithSuspense
+        modelUrl={`/models/${pokename}.glb`}
+        scale={scales[pokename]}
+        position={positions[pokename]}
+      />
     </div>
   )
 }
