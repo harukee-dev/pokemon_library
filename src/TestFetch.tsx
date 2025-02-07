@@ -59,8 +59,8 @@ export const TestFetch = ({ setPokename }) => {
           setId(data.id);
           setQuery("");
         })
-        .catch((error) => console.error(error));
-        alert("Error")
+        .catch((error) => alert("Error"));
+        
         setQuery("");
     }
   }
