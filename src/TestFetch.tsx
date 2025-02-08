@@ -36,7 +36,7 @@ export const TestFetch = ({ setPokename }) => {
       }
     }
     fetchData()
-  }, [id])
+  }, [id, setPokename])
 
   function handleNext() {
     setId(id >= 26 ? 1 : id + 1)
