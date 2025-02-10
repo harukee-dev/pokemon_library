@@ -1,3 +1,4 @@
+
 export const scales = {
   bulbasaur: 3.5,
   ivysaur: 1.5,
