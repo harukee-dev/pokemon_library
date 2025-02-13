@@ -1,0 +1,140 @@
+.card{
+    width: 35vh;
+    height: 50vh;
+    color: rgb(48, 31, 0);
+    background-image: url("/public/picture/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2vh;
+    margin-left: 30vh;
+    margin-top: 5vh;
+    border: solid #7d7d7d;
+    transition: 300ms ease-out;
+}
+
+
+
+/* Адаптация для телефонов (до 768px) */
+@media (max-width: 768px) {
+    .card {
+        width: 28vh; /* Уменьшаем ширину */
+        height: 40vh; /* Уменьшаем высоту */
+        font-size: 2vh; /* Оптимальный размер текста */
+        margin-left: 3.5vh;
+        margin-top: 3vh;
+    }
+}
+/* Адаптация для широких телефонов и планшетов (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        width: 30vh;
+        height: 45vh;
+        font-size: 2vh;
+        margin-left: 22vh;
+        margin-top: 4vh;
+    }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .card{
+        width: 30vh;
+        height: 45vh;
+        font-size: 2vh;
+        margin-left: 7vh;
+        margin-top: 7vh;
+    }
+  }
+/* Адаптация для 3K-мониторов (2880px и выше) */
+@media (min-width: 2880px) {
+    .card {
+        width: 50vh; /* Увеличиваем ширину */
+        height: 70vh; /* Увеличиваем высоту */
+        font-size: 3vh;
+        border-radius: 3vh; /* Немного скругляем */
+        margin-left: 25vh;
+        margin-top: 8vh;
+    }
+}
+@media (min-width: 3440px) {
+    .card {
+        width: 50vh; /* Увеличиваем ширину */
+        height: 70vh; /* Увеличиваем высоту */
+        font-size: 3vh;
+        border-radius: 3vh; /* Немного скругляем */
+        margin-left: 25vh;
+        margin-top: 8vh;
+    }
+}
+
+
+.preview{
+    font-size: 1vh;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(250, 209, 5, 0.448);
+    border-top: solid #7d7d7d;
+    border-bottom: solid #7d7d7d;
+    border-color: #7d7d7d;
+    z-index: 0;
+
+}
+
+/* Адаптация для телефонов (до 768px) */
+@media (max-width: 768px) {
+    .preview {
+        font-size: 2vh;
+        height: 50%; 
+        border-width: 2px; 
+    }
+}
+/* Адаптация для широких телефонов (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .preview {
+        font-size: 1.8vh;
+        height: 45%;
+    }
+}
+/* Адаптация для 3K-мониторов (2880px и выше) */
+@media (min-width: 2880px) {
+    .preview {
+        font-size: 1.5vh; 
+        height: 50%; 
+        border-width: 3px; 
+    }
+}
+
+
+.card h2{
+    margin: 0vh;
+    margin-top: 0.3vh;
+    font-size: 2vh; 
+    color: rgb(74, 53, 3); 
+    text-transform: uppercase; 
+    padding: 0.2vh 2vh; 
+    border-radius: 1vh; 
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.157);
+    text-align: center;
+}
+
+.card h1{
+    margin: 0vh 1vh 1vh;
+    text-align: center;
+}
+
+.pokemon-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vh; 
+    font-weight: bold; 
+    color: black; 
+    text-transform: uppercase; 
+    background: linear-gradient(to right, #c0c0c0, #f8f8f8, #c0c0c0);
+    padding: 5px 15px; 
+    border-radius: 5px; 
+    display: inline-block;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    
+}
+
+

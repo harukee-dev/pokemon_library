@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import './Fetch.css';
 
 export const TestFetch = ({ setPokename }) => {
   const [pokemon, setPokemon] = useState<string | null>(null)
@@ -72,17 +73,18 @@ export const TestFetch = ({ setPokename }) => {
     }
   }
 
+
   return (
     <div>
-      <h1>Name: {pokemon}</h1>
-      <h2>Hp: {hp}</h2>
-      <h2>Attack: {attack}</h2>
-      <h2>Defense: {defense}</h2>
-      <h2>Speed: {speed}</h2>
-      <h2>
-        Height: {height} Weight: {weight}
-      </h2>
-      <img src={sprite || ''} alt="pokemon-sprite" />
+      <div className='card' id='card'>
+        <h1 className='pokemon-title'>{pokemon}</h1>
+        <img className='preview' src={sprite || ''} alt="pokemon-sprite" />
+        <h2>Hp: {hp}</h2>
+        <h2>Attack: {attack}</h2>
+        <h2>Defense: {defense}</h2>
+        <h2>Speed: {speed}</h2>
+        <h2>Weight: {weight} Height: {height}</h2>
+      </div>
       <audio ref={audioRef} src={sound || ''}></audio>
       <button onClick={playSound}>Sound of death</button>
       <div>
