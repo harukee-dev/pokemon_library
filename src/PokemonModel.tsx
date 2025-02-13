@@ -4,6 +4,9 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from '@react-three/drei'
 
+import './PokemonModel.css'
+
+
 interface PokemonModelProps {
   modelUrl: string
   scale: number
@@ -17,8 +20,11 @@ export const PokemonModel = ({
 }: PokemonModelProps) => {
   // @ts-ignore
   const gltf = useLoader<GLTF, string>(GLTFLoader, modelUrl)
+  
   return (
-    <Canvas style={{ height: '800px', width: '800px' }}>
+    <div className='pokemon-container'>
+    <Canvas className='pokemon-canvas' style={{ height: '50vh', width: '50vh' }}>
+      
       {/* @ts-ignore */}
       <ambientLight intensity={0.5} />
       {/* @ts-ignore */}
@@ -38,6 +44,7 @@ export const PokemonModel = ({
         target={[0, 0, -1]}
       />
     </Canvas>
+    </div>
   )
 }
 
