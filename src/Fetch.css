@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 2vh;
-    margin-left: 5vh;
+    margin-left: 30vh;
     margin-top: 5vh;
     border: solid #7d7d7d;
     transition: 300ms ease-out;
@@ -20,7 +20,7 @@
         width: 28vh; /* Уменьшаем ширину */
         height: 40vh; /* Уменьшаем высоту */
         font-size: 2vh; /* Оптимальный размер текста */
-        margin-left: 2vh;
+        margin-left: 3.5vh;
         margin-top: 3vh;
     }
 }
@@ -30,10 +30,19 @@
         width: 30vh;
         height: 45vh;
         font-size: 2vh;
-        margin-left: 3vh;
+        margin-left: 22vh;
         margin-top: 4vh;
     }
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .card{
+        width: 30vh;
+        height: 45vh;
+        font-size: 2vh;
+        margin-left: 7vh;
+        margin-top: 7vh;
+    }
+  }
 /* Адаптация для 3K-мониторов (2880px и выше) */
 @media (min-width: 2880px) {
     .card {
@@ -41,7 +50,17 @@
         height: 70vh; /* Увеличиваем высоту */
         font-size: 3vh;
         border-radius: 3vh; /* Немного скругляем */
-        margin-left: 8vh;
+        margin-left: 25vh;
+        margin-top: 8vh;
+    }
+}
+@media (min-width: 3440px) {
+    .card {
+        width: 50vh; /* Увеличиваем ширину */
+        height: 70vh; /* Увеличиваем высоту */
+        font-size: 3vh;
+        border-radius: 3vh; /* Немного скругляем */
+        margin-left: 25vh;
         margin-top: 8vh;
     }
 }
@@ -117,4 +136,5 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     
 }
+
 
