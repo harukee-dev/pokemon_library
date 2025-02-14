@@ -88,16 +88,17 @@ export const TestFetch = ({ setPokename }) => {
       <audio ref={audioRef} src={sound || ''}></audio>
       <button onClick={playSound}>Sound of death</button>
       <div>
-        <button onClick={handlePrev}>Previous</button>
-        <button onClick={handleNext}>Next</button>
+        <button className='button-P' onClick={handlePrev}>Previous</button>
+        <button className='button-N' onClick={handleNext}>Next</button>
 
-        <input
+        <input className='search'
           type="text"
           value={query}
           onChange={handleSearch}
           onKeyDown={handleKeyDown}
           placeholder="Enter the Pokémon name"
         />
+        
       </div>
     </div>
   )

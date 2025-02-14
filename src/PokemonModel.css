@@ -7,33 +7,19 @@
   @media (min-width: 768px) and (max-width: 1024px) {
     .pokemon-container{
     top: 50vh;
-    right: 50vh;
-    width: 320px;
-    
+    right: 50vh; 
     }
   }
-  @media (min-width: 425px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     .pokemon-container{
-    top: 50vh;
-    right: 30vh;
-    width: 320px;
-    
-    }
-  }
-  @media (min-width: 320px) and (max-width: 425px) {
-    .pokemon-container{
-    top: 50vh;
-    right: 4vh;
-    width: 420px;
-    
+    top: 55vh;
+    right: -3vh;
     }
   }
   @media (max-width: 320px) {
     .pokemon-container{
     top: 50vh;
     right: 1vh;
-    width: 320px;
-    
     }
   }
   @media (min-width: 2880px) {
@@ -46,11 +32,9 @@
     .pokemon-container{
     top: 5vh;
     right: 30vh;
-    width: 320px;
-    
     }
   }
-  
+
   .pokemon-canvas {
     border: solid #7d7d7d;
     border-radius: 2vh;
@@ -58,4 +42,3 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
