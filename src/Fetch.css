@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 2vh;
-    margin-left: 5vh;
+    margin-left: 30vh;
     margin-top: 5vh;
     border: solid #7d7d7d;
     transition: 300ms ease-out;
@@ -18,9 +18,9 @@
 @media (max-width: 768px) {
     .card {
         width: 28vh; /* Уменьшаем ширину */
-        height: 40vh; /* Уменьшаем высоту */
+        height: 50vh; /* Уменьшаем высоту */
         font-size: 2vh; /* Оптимальный размер текста */
-        margin-left: 2vh;
+        margin-left: 8vh;
         margin-top: 3vh;
     }
 }
@@ -30,10 +30,11 @@
         width: 30vh;
         height: 45vh;
         font-size: 2vh;
-        margin-left: 3vh;
+        margin-left: 22vh;
         margin-top: 4vh;
     }
 }
+
 /* Адаптация для 3K-мониторов (2880px и выше) */
 @media (min-width: 2880px) {
     .card {
@@ -41,7 +42,17 @@
         height: 70vh; /* Увеличиваем высоту */
         font-size: 3vh;
         border-radius: 3vh; /* Немного скругляем */
-        margin-left: 8vh;
+        margin-left: 25vh;
+        margin-top: 8vh;
+    }
+}
+@media (min-width: 3440px) {
+    .card {
+        width: 50vh; /* Увеличиваем ширину */
+        height: 70vh; /* Увеличиваем высоту */
+        font-size: 3vh;
+        border-radius: 3vh; /* Немного скругляем */
+        margin-left: 25vh;
         margin-top: 8vh;
     }
 }
@@ -118,54 +129,74 @@
     
 }
 
-.pokemon-title::before {
-    content: "БАЗОВЫЙ";
+.button-P {
     position: absolute;
-    right: -80px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(to bottom, #7d7d7d, #b3b3b3);
-    padding: 3px 8px;
-    border-radius: 3px;
-    text-shadow: 1px 1px 2px black;
-    box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.6);
-}
-/*Телефоны (до 768px)*/
-@media (max-width: 768px) {
-    .pokemon-title {
-        font-size: 5vw; 
-        padding: 1vw 2vw;
-    }
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(48, 31, 0);
+    background-image: url("/public/picture/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    top: 20vh;
+    left: 77vh;
+  }
 
-    .pokemon-title::before {
-        font-size: 3vw;
-        right: -12vw; 
-    }
-}
-/*Широкие телефоны (768px - 1024px)*/
-@media (max-width: 1024px) {
-    .pokemon-title {
-        font-size: 4vw;
-        padding: 0.8vw 2vw;
-    }
+  .button-P:active {
+    box-shadow: 0 5px #777777;
+    transform: translateY(4px);
+    color: rgb(48, 31, 0);
+  }
 
-    .pokemon-title::before {
-        font-size: 2.5vw;
-        right: -10vw;
-    }
-}
-/*3K-мониторы (2560px и выше)*/
-@media (min-width: 2560px) {
-    .pokemon-title {
-        font-size: 1.8vw;
-        padding: 0.3vw 1vw;
-    }
+  .button-N {
+    position: absolute;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(48, 31, 0);
+    background-image: url("/public/picture/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    top: 20vh;
+    left: 100vh;
+  }
 
-    .pokemon-title::before {
-        font-size: 1.2vw;
-        right: -5vw;
-    }
-}
+  .button-N:active {
+    box-shadow: 0 5px #777777;
+    transform: translateY(4px);
+    color: rgb(48, 31, 0);
+  }
+
+  .search{
+    position: absolute;
+    top: 10vh;
+    left: 77vh;
+    width: 30vh;
+    padding: 15px;
+    background-image: url("/public/picture/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid #7d7d7d;
+    color: rgb(48, 31, 0);
+    font-size: 15px;
+    box-shadow: 3px 1px 0px 2px #7d7d7d , 0px -1px 0px 2px #7d7d7d;
+    height: 2vh;    
+    transform: skew(-3deg, 1deg);
+    font-family: 'Knewave', cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }

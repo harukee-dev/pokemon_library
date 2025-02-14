@@ -1,0 +1,44 @@
+.pokemon-container {
+    position: absolute;
+    top: 5vh;
+    right: 30vh;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .pokemon-container{
+    top: 50vh;
+    right: 50vh; 
+    }
+  }
+  @media (max-width: 768px) {
+    .pokemon-container{
+    top: 55vh;
+    right: -3vh;
+    }
+  }
+  @media (max-width: 320px) {
+    .pokemon-container{
+    top: 50vh;
+    right: 1vh;
+    }
+  }
+  @media (min-width: 2880px) {
+    .pokemon-container{
+    top: 20vh;
+    right: 25vh;
+    }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .pokemon-container{
+    top: 5vh;
+    right: 30vh;
+    }
+  }
+
+  .pokemon-canvas {
+    border: solid #7d7d7d;
+    border-radius: 2vh;
+    background-image: url("/public/picture/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
