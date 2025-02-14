@@ -146,7 +146,7 @@
     border-radius: 15px;
     box-shadow: 0 9px #999;
     top: 20vh;
-    left: 68vh;
+    left: 77vh;
   }
 
   .button-P:active {
@@ -172,7 +172,7 @@
     border-radius: 15px;
     box-shadow: 0 9px #999;
     top: 20vh;
-    left: 85vh;
+    left: 100vh;
   }
 
   .button-N:active {
@@ -184,8 +184,8 @@
   .search{
     position: absolute;
     top: 10vh;
-    left: 70vh;
-    width: 20vh;
+    left: 77vh;
+    width: 30vh;
     padding: 15px;
     background-image: url("/public/picture/back.png");
     background-repeat: no-repeat;
