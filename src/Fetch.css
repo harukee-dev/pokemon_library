@@ -18,9 +18,9 @@
 @media (max-width: 768px) {
     .card {
         width: 28vh; /* Уменьшаем ширину */
-        height: 40vh; /* Уменьшаем высоту */
+        height: 50vh; /* Уменьшаем высоту */
         font-size: 2vh; /* Оптимальный размер текста */
-        margin-left: 3.5vh;
+        margin-left: 8vh;
         margin-top: 3vh;
     }
 }
@@ -34,15 +34,7 @@
         margin-top: 4vh;
     }
 }
-@media (min-width: 1440px) and (max-width: 1920px) {
-    .card{
-        width: 30vh;
-        height: 45vh;
-        font-size: 2vh;
-        margin-left: 7vh;
-        margin-top: 7vh;
-    }
-  }
+
 /* Адаптация для 3K-мониторов (2880px и выше) */
 @media (min-width: 2880px) {
     .card {
@@ -137,4 +129,74 @@
     
 }
 
+.button-P {
+    position: absolute;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(48, 31, 0);
+    background-image: url("/public/picture/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    top: 20vh;
+    left: 68vh;
+  }
 
+  .button-P:active {
+    box-shadow: 0 5px #777777;
+    transform: translateY(4px);
+    color: rgb(48, 31, 0);
+  }
+
+  .button-N {
+    position: absolute;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(48, 31, 0);
+    background-image: url("/public/picture/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    top: 20vh;
+    left: 85vh;
+  }
+
+  .button-N:active {
+    box-shadow: 0 5px #777777;
+    transform: translateY(4px);
+    color: rgb(48, 31, 0);
+  }
+
+  .search{
+    position: absolute;
+    top: 10vh;
+    left: 70vh;
+    width: 20vh;
+    padding: 15px;
+    background-image: url("/public/picture/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid #7d7d7d;
+    color: rgb(48, 31, 0);
+    font-size: 15px;
+    box-shadow: 3px 1px 0px 2px #7d7d7d , 0px -1px 0px 2px #7d7d7d;
+    height: 2vh;    
+    transform: skew(-3deg, 1deg);
+    font-family: 'Knewave', cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
