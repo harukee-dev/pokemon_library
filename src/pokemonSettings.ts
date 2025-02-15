@@ -19,13 +19,13 @@ export const scales = {
   pidgeotto: 0.7,
   pidgeot: 0.015,
   rattata: 0.055,
-  raticate: 0.024,
+  raticate: 0.034,
   spearow: 2.8,
   fearow: 0.8,
   ekans: 1.25,
   arbok: 0.35,
   pikachu: 0.25,
-  raichu: 1.4,
+  raichu: 0.70,
 }
 
 export const positions = {
@@ -48,11 +48,11 @@ export const positions = {
   pidgeotto: [0, -0.6, -1.3],
   pidgeot: [0, -0.55, -1.2],
   rattata: [0, -0.2, -1],
-  raticate: [0, -0.5, 1.5,],
+  raticate: [0, -1, -1,],
   spearow: [0, -0.5, -1],
   fearow: [0, -0.5, -1],
   ekans: [-1.5, -0.5, -6],
   arbok: [0, 1, -1],
   pikachu: [0, -1, -1],
-  raichu: [0, -1, -1],
+  raichu: [0, -0.5, -1],
 }
