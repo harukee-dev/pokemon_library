@@ -20,7 +20,7 @@
         width: 30vh; /* Уменьшаем ширину */
         height: 45vh; /* Уменьшаем высоту */
         font-size: 2vh; /* Оптимальный размер текста */
-        margin-left: 7.5vh;
+        margin-left: 8vh;
         margin-top: 7.5vh;
     }  
 }
@@ -214,11 +214,11 @@
   /*адаптация кнопок*/
   @media (max-width: 430px){
     .button-P{
-        left: 7.5vh;
+        left: 10vh;
         top: 54vh;
     }
     .button-N{
-        left: 28vh;
+        left: 30vh;
         top: 54vh;
     }
     .search{
