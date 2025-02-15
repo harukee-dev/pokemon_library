@@ -23,7 +23,7 @@ export const PokemonModel = ({
   
   return (
     <div className='pokemon-container'>
-    <Canvas className='pokemon-canvas' style={{ height: '50vh', width: '50vh' }}>
+    <Canvas className='pokemon-canvas'>
       
       {/* @ts-ignore */}
       <ambientLight intensity={0.5} />

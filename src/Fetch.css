@@ -1,6 +1,6 @@
 .card{
     width: 35vh;
-    height: 50vh;
+    height: 55vh;
     color: rgb(48, 31, 0);
     background-image: url("/public/picture/back.png");
     background-repeat: no-repeat;
@@ -15,23 +15,33 @@
 
 
 /* Адаптация для телефонов (до 768px) */
-@media (max-width: 768px) {
+@media (max-width: 412px){
+    .card {
+        width: 30vh; /* Уменьшаем ширину */
+        height: 45vh; /* Уменьшаем высоту */
+        font-size: 2vh; /* Оптимальный размер текста */
+        margin-left: 7vh;
+        margin-top: 7.5vh;
+    }  
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
     .card {
         width: 28vh; /* Уменьшаем ширину */
         height: 50vh; /* Уменьшаем высоту */
         font-size: 2vh; /* Оптимальный размер текста */
-        margin-left: 8vh;
+        margin-left: 0vh;
         margin-top: 3vh;
     }
 }
 /* Адаптация для широких телефонов и планшетов (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1440px) {
     .card {
-        width: 30vh;
-        height: 45vh;
+        width: 35vh;
+        height: 55vh;
         font-size: 2vh;
-        margin-left: 22vh;
-        margin-top: 4vh;
+        margin-left: 0vh;
+        margin-top: 5vh;
     }
 }
 
@@ -48,12 +58,12 @@
 }
 @media (min-width: 3440px) {
     .card {
-        width: 50vh; /* Увеличиваем ширину */
-        height: 70vh; /* Увеличиваем высоту */
+        width: 70vh; /* Увеличиваем ширину */
+        height: 90vh; /* Увеличиваем высоту */
         font-size: 3vh;
         border-radius: 3vh; /* Немного скругляем */
         margin-left: 25vh;
-        margin-top: 8vh;
+        margin-top: 5vh;
     }
 }
 
@@ -145,8 +155,8 @@
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
-    top: 20vh;
-    left: 77vh;
+    top: 30vh;
+    left: 80vh;
   }
 
   .button-P:active {
@@ -171,8 +181,8 @@
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
-    top: 20vh;
-    left: 100vh;
+    top: 30vh;
+    left: 104vh;
   }
 
   .button-N:active {
@@ -183,8 +193,8 @@
 
   .search{
     position: absolute;
-    top: 10vh;
-    left: 77vh;
+    top: 20vh;
+    left: 80vh;
     width: 30vh;
     padding: 15px;
     background-image: url("/public/picture/back.png");
@@ -199,4 +209,57 @@
     font-family: 'Knewave', cursive;
     letter-spacing: 2px;
     text-transform: uppercase;
+  }
+
+  /*адаптация кнопок*/
+  @media (max-width: 412px){
+    .button-P{
+        left: 9vh;
+        top: 54vh;
+    }
+    .button-N{
+        left: 26.5vh;
+        top: 54vh;
+    }
+    .search{
+        left: 6vh;
+        top: 1vh;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1440px){
+    .button-N{
+        left: 60vh;
+    }
+    .button-P{
+        left: 45vh;
+    }
+    .search{
+        left: 45vh;
+        width: 20vh;
+    }
+  }
+
+  @media (min-width: 2880px) {
+    .button-N{
+        left: 140vh;
+    }
+    .button-P{
+        left: 105vh;
+    }
+    .search{
+        left: 110vh;
+    }
+  }
+
+  @media (min-width: 3440px) {
+    .button-N{
+        left: 140vh;
+    }
+    .button-P{
+        left: 105vh;
+    }
+    .search{
+        left: 110vh;
+    }
   }
