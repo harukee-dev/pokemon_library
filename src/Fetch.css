@@ -15,12 +15,12 @@
 
 
 /* Адаптация для телефонов (до 768px) */
-@media (max-width: 412px){
+@media (max-width: 430px){
     .card {
         width: 30vh; /* Уменьшаем ширину */
         height: 45vh; /* Уменьшаем высоту */
         font-size: 2vh; /* Оптимальный размер текста */
-        margin-left: 7vh;
+        margin-left: 7.5vh;
         margin-top: 7.5vh;
     }  
 }
@@ -214,11 +214,11 @@
   /*адаптация кнопок*/
   @media (max-width: 430px){
     .button-P{
-        left: 6vh;
+        left: 7.5vh;
         top: 54vh;
     }
     .button-N{
-        left: 27vh;
+        left: 28vh;
         top: 54vh;
     }
     .search{
