@@ -20,10 +20,10 @@
     height: 30vh;
     }
   }
-  @media (max-width: 425px) {
+  @media (max-width: 430px) {
     .pokemon-container{
-    top: 62vh;
-    right: 7vh;
+    top: 60vh;
+    right: 10vh;
     }
   }
   @media (min-width: 2880px) {

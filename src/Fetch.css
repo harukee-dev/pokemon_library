@@ -212,18 +212,19 @@
   }
 
   /*адаптация кнопок*/
-  @media (max-width: 412px){
+  @media (max-width: 430px){
     .button-P{
-        left: 9vh;
-        top: 54vh;
+        left: 6vh;
+        top: 50vh;
     }
     .button-N{
-        left: 26.5vh;
-        top: 54vh;
+        left: 27vh;
+        top: 50vh;
     }
     .search{
         left: 6vh;
         top: 1vh;
+        height: 1vh;
     }
   }
 
