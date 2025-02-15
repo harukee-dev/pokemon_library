@@ -142,8 +142,8 @@
 .button-P {
     position: absolute;
     display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
+    padding: 1vh 2vh;
+    font-size: 2vh;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -168,8 +168,8 @@
   .button-N {
     position: absolute;
     display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
+    padding: 1vh 2vh;;
+    font-size: 2vh;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
