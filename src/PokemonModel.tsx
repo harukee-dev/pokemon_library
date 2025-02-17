@@ -55,6 +55,5 @@ export const PokemonModelWithSuspense = ({
 }: PokemonModelProps) => (
   <Suspense fallback={<div className='loading'></div>}>
     <PokemonModel modelUrl={modelUrl} scale={scale} position={position} />
-    <div className='loading'></div>
   </Suspense>
 )
