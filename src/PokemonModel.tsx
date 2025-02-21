@@ -3,9 +3,7 @@ import { Suspense } from 'react'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from '@react-three/drei'
-
 import './PokemonModel.css'
-
 
 interface PokemonModelProps {
   modelUrl: string
@@ -47,13 +45,14 @@ export const PokemonModel = ({
     </div>
   )
 }
+const Load = `${process.env.PUBLIC_URL}/picture/png.png`
 
 export const PokemonModelWithSuspense = ({
   modelUrl,
   scale,
   position,
 }: PokemonModelProps) => (
-  <Suspense fallback={<div className='loading'></div>}>
-    <PokemonModel modelUrl={modelUrl} scale={scale} position={position} />
+  <Suspense fallback={<div className='loading'><img className='LoadPicture' src={Load} alt="load" /></div>}>
+    <PokemonModel modelUrl={modelUrl} scale={scale} position={position}/>
   </Suspense>
 )
