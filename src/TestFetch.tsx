@@ -78,7 +78,7 @@ export const TestFetch = ({ setPokename }) => {
     <div>
       <div className='card' id='card'>
         <h1 className='pokemon-title'>{pokemon}</h1>
-        <img className='preview' src={sprite || ''} alt="pokemon-sprite" />
+        <img className='preview'onClick={playSound} src={sprite || ''} alt="pokemon-sprite" />
         <h2>Hp: {hp}</h2>
         <h2>Attack: {attack}</h2>
         <h2>Defense: {defense}</h2>
@@ -86,7 +86,6 @@ export const TestFetch = ({ setPokename }) => {
         <h2>Weight: {weight} Height: {height}</h2>
       </div>
       <audio ref={audioRef} src={sound || ''}></audio>
-      <button onClick={playSound}>Sound of death</button>
       <div>
         <button className='button-P' onClick={handlePrev}>Previous</button>
         <button className='button-N' onClick={handleNext}>Next</button>
