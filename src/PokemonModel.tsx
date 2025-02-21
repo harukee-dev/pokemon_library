@@ -6,6 +6,7 @@ import { OrbitControls } from '@react-three/drei'
 
 import './PokemonModel.css'
 
+const Load = `${process.env.PUBLIC_URL}/picture/png.png`
 
 interface PokemonModelProps {
   modelUrl: string
@@ -53,7 +54,7 @@ export const PokemonModelWithSuspense = ({
   scale,
   position,
 }: PokemonModelProps) => (
-  <Suspense fallback={<div className='loading'></div>}>
+  <Suspense fallback={<div className='loading'><img className='LoadPicture' src={Load} alt="load" /></div>}>
     <PokemonModel modelUrl={modelUrl} scale={scale} position={position} />
   </Suspense>
 )

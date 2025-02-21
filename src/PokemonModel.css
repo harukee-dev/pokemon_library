@@ -50,7 +50,7 @@
 
 .loading{
   border: 0.7vh solid #7d7d7d; 
-  border-top: 0.7vh solid rgba(250, 209, 5, 0.448);
+  border-top: 0.7vh solid rgb(250, 209, 5);
   border-radius: 50%;
   width: 2vh;
   height: 2vh;
@@ -102,4 +102,11 @@
     right: 15vw;
     top: 25vh;
   }
+}
+
+LoadPicture{
+  width: 1vh;
+  height: 1vh;
+  size: 1vh;
+  font-size: 1vh;
 }
