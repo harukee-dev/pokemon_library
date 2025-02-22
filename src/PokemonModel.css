@@ -95,6 +95,12 @@
     top: 45vh;
   }
 }
+@media (min-width: 3440px) {
+  .loading {
+    right: 25vw;
+    top: 45vh;
+  }
+}
 
 /* 🖥 1440px (стандартные Full HD экраны) */
 @media (min-width: 1440px) and (max-width: 1440px) {
